@@ -17,7 +17,7 @@
 
 ## About The Project
 
-Like a lot of people, I started my smart-contract auditor journey by reporting gas-optimizations on [Code4rena](https://code4rena.com/). Hence, I created this bot to automate the process and earn a few rewards easily. Now is time to open-source it, so you can use it in you audit competitions too (Code4rena, CodeHawks, Hats, Immunefy...).
+Like a lot of people, I started my smart-contract auditor journey by reporting gas-optimizations on [Code4rena](https://code4rena.com/). Hence, I created this bot to automate the process and earn a few rewards easily. Now is time to open-source it, so you can use it in you audit competitions too (Code4rena, CodeHawks, Hats, Immunefi...).
 
 This script works with advenced regular expressions to check the presence of common optimization issues. All the rules are in the `Issues.py` file where you can add your own rules too.
 
