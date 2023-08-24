@@ -3,6 +3,9 @@
 <!-- LOGO -->
 <br />
 <p align="center">
+    <img src="https://github.com/MiniGlome/Gas-Optimizations-auto-report/assets/54740007/87afafb6-8b48-4d00-ac76-1e2494e17d58" alt="Logo" width="80" height="80">
+
+
   <h3 align="center">Gas-Optimizations auto report</h3>
 
   <p align="center">
