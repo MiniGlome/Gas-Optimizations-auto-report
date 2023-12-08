@@ -127,4 +127,10 @@ function add(bytes32 str) public {
 		"description": "Using the addition operator instead of plus-equals saves **[113 gas](https://gist.github.com/MiniGlome/f462d69a30f68c89175b0ce24ce37cae)**\nSame for `-=`, `*=` and `/=`.",
 		"regex": "(?<!]\s)[+\-\*/]=",
 	},
+	{
+		"code": "G17",
+		"title": "Casting block.timestamp can save you some gas",
+		"description": "block.timestamp can be cast to a uint48 or even uint32 that is still valid for the year 2106. You can save around",
+		"regex": "(?!(uint48|uint32)[(])block\.timestamp",
+	},
 ]
