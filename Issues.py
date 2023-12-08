@@ -130,7 +130,7 @@ function add(bytes32 str) public {
 	{
 		"code": "G17",
 		"title": "Casting block.timestamp can save you some gas",
-		"description": "block.timestamp can be cast to a uint48 or even uint32 that is still valid for the year 2106. You can save around",
+		"description": "block.timestamp can be cast to a uint48 or even uint32 that is still valid for the year 2106.",
 		"regex": "(?!(uint48|uint32)[(])block\.timestamp",
 	},
 ]
