@@ -136,7 +136,14 @@ function add(bytes32 str) public {
 	{
 		"code": "G18",
 		"title": "Consider replacing `<x> % 2` with `<x> & uint(1)`",
-		"description": "You can save around 175 gas by using `<x> & uint(1)` instead of `<x> % 2",
+		"description": "You can save around 175 gas by using `<x> & uint(1)` instead of `<x> % 2`",
 		"regex": "%\s?2",
 	},
+	{
+		"code": "G19",
+		"title": "abi.encodePacked is more gas efficient than abi.encode",
+		"description": "You can save around 175 gas by using abi.encodePacked instead of abi.encode",
+		"regex": "abi\.encode\(",
+	},
+
 ]
