@@ -127,4 +127,23 @@ function add(bytes32 str) public {
 		"description": "Using the addition operator instead of plus-equals saves **[113 gas](https://gist.github.com/MiniGlome/f462d69a30f68c89175b0ce24ce37cae)**\nSame for `-=`, `*=` and `/=`.",
 		"regex": "(?<!]\s)[+\-\*/]=",
 	},
+	{
+		"code": "G17",
+		"title": "Casting block.timestamp can save you some gas",
+		"description": "block.timestamp can be cast to a uint48 or even uint32 that is still valid for the year 2106.",
+		"regex": "(?!(uint48|uint32)[(])block\.timestamp",
+	},
+	{
+		"code": "G18",
+		"title": "Consider replacing `<x> % 2` with `<x> & uint(1)`",
+		"description": "You can save around 175 gas by using `<x> & uint(1)` instead of `<x> % 2`",
+		"regex": "%\s?2",
+	},
+	{
+		"code": "G19",
+		"title": "abi.encodePacked is more gas efficient than abi.encode",
+		"description": "You can save around 175 gas by using abi.encodePacked instead of abi.encode",
+		"regex": "abi\.encode\(",
+	},
+
 ]
