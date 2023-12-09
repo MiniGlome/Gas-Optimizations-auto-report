@@ -142,7 +142,7 @@ function add(bytes32 str) public {
 	{
 		"code": "G19",
 		"title": "abi.encodePacked is more gas efficient than abi.encode",
-		"description": "You can save around 175 gas by using abi.encodePacked instead of abi.encode",
+		"description": "abi.encode pads all elementary types to 32 bytes, whereas abi.encodePacked will only use the minimal required memory to encode the data.",
 		"regex": "abi\.encode\(",
 	},
 
