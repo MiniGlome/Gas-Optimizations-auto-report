@@ -135,12 +135,6 @@ function add(bytes32 str) public {
 	},
 	{
 		"code": "G18",
-		"title": "Consider using the low-level function call() instead of send() or transfer()",
-		"description": "transfer() and send() cost 2300 gas, by using call you can indicate the gas limit.",
-		"regex": "(\.send[(]|\.transfer[(])",
-	},
-	{
-		"code": "G19",
 		"title": "Consider replacing `<x> % 2` with `<x> & uint(1)`",
 		"description": "You can save around 175 gas by using `<x> & uint(1)` instead of `<x> % 2",
 		"regex": "%\s?2",
