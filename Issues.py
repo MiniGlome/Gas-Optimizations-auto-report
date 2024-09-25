@@ -37,7 +37,7 @@ issues = [
 	},
 	{
 		"code": "G07",
-		"title": "Increments can be `unchecked`",
+		"title": "Increments can be `unchecked`, in for loops it doesn't matter if you choose i++ or ++i since the incrementation happens at the end, ++i is however the more optimized option",
 		"description": """Increments in for loops as well as some uint256 iterators cannot realistically overflow as this would require too many iterations, so this can be `unchecked`.
 		The `unchecked` keyword is new in solidity version 0.8.0, so this only applies to that version or higher, which these instances are. This saves 30-40 gas PER LOOP.""",
 		"regex": "\+\+",
