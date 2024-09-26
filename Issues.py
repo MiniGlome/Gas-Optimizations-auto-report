@@ -37,7 +37,7 @@ issues = [
 	},
 	{
 		"code": "G07",
-		"title": "Increments can be `unchecked`",
+		"title": "Increments can be `unchecked`, in for loops it doesn't matter if you choose i++ or ++i since the incrementation happens at the end, ++i is however the more optimized option",
 		"description": """Increments in for loops as well as some uint256 iterators cannot realistically overflow as this would require too many iterations, so this can be `unchecked`.
 		The `unchecked` keyword is new in solidity version 0.8.0, so this only applies to that version or higher, which these instances are. This saves 30-40 gas PER LOOP.""",
 		"regex": "\+\+",
@@ -127,4 +127,23 @@ function add(bytes32 str) public {
 		"description": "Using the addition operator instead of plus-equals saves **[113 gas](https://gist.github.com/MiniGlome/f462d69a30f68c89175b0ce24ce37cae)**\nSame for `-=`, `*=` and `/=`.",
 		"regex": "(?<!]\s)[+\-\*/]=",
 	},
+	{
+		"code": "G17",
+		"title": "Casting block.timestamp can save you some gas",
+		"description": "block.timestamp can be cast to a uint48 or even uint32 that is still valid for the year 2106.",
+		"regex": "(?!(uint48|uint32)[(])block\.timestamp",
+	},
+	{
+		"code": "G18",
+		"title": "Consider replacing `<x> % 2` with `<x> & uint(1)`",
+		"description": "You can save around 175 gas by using `<x> & uint(1)` instead of `<x> % 2`",
+		"regex": "%\s?2",
+	},
+	{
+		"code": "G19",
+		"title": "abi.encodePacked is more gas efficient than abi.encode",
+		"description": "abi.encode pads all elementary types to 32 bytes, whereas abi.encodePacked will only use the minimal required memory to encode the data.",
+		"regex": "abi\.encode\(",
+	},
+
 ]
